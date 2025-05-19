@@ -25,18 +25,18 @@ Below is a simple flow diagram for the Bubble Sort algorithm:
 
 ```mermaid
 flowchart TD
-    A[Start] --> B[Initialize timer]
-    B --> C[Set i = 0]
-    C --> D{Is i < length?}
-    D -- No --> E[Stop timer & Print time]
-    D -- Yes --> F[Set j = length-1]
-    F --> G{Is j > i?}
-    G -- No --> H[Increment i]
+    A["Start"] --> B["Initialize timer"]
+    B --> C["Set i = 0"]
+    C --> D{"Is i &lt; length?"}
+    D -- No --> E["Stop timer & Print time"]
+    D -- Yes --> F["Set j = length-1"]
+    F --> G{"Is j &gt; i?"}
+    G -- No --> H["Increment i"]
     H --> D
-    G -- Yes --> I{arr[j] < arr[j-1]?}
-    I -- No --> J[Decrement j]
+    G -- Yes --> I["arr[j] &lt; arr[j-1]"]
+    I -- No --> J["Decrement j"]
     J --> G
-    I -- Yes --> K[Swap arr[j] and arr[j-1]]
+    I -- Yes --> K["Swap arr[j] and arr[j-1]"]
     K --> J
 ```
 
