@@ -40,4 +40,5 @@ flowchart TD
     K --> J
 ```
 
+
 For the optimized version, add a check for swaps in each outer loop iteration and break if no swaps occurred.
