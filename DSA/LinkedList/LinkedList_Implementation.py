@@ -49,22 +49,33 @@ class LinkedList:
             del(tmp)
 
     def delete_element_from_last(self):
-        pass
-    
-    def delete_element_from_index(self, node, index):
-        a=2
+        if self.head is None:
+            print("Node is empty")
+        elif self.head.add_next_node is None:
+            tmp = self.head
+            self.head = None
+            del(tmp)
+        else:
+            tmp = self.head
+            while tmp.add_next_node is not None:
+                prev = tmp
+                tmp = tmp.add_next_node
+            prev.add_next_node = None
+            del(tmp)
 
 root = Node(53)
 linked_list = LinkedList()
-linked_list.head = None
+linked_list.head = root
 # linked_list.delete_element_from_beg()
+# linked_list.delete_element_from_last()
 
-linked_list.insert_element_at_beg(45)
-linked_list.insert_element_at_last(500)
-linked_list.insert_element_at_beg(425)
+# linked_list.insert_element_at_beg(45)
+# linked_list.insert_element_at_last(500)
+# linked_list.insert_element_at_beg(425)
 linked_list.insert_element_at_last(51)
-linked_list.delete_element_from_beg()
 # linked_list.delete_element_from_beg()
+# linked_list.delete_element_from_beg()
+linked_list.delete_element_from_last()
 
 linked_list.print_element_of_node()
 
