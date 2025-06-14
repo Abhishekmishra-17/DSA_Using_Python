@@ -18,6 +18,7 @@ class LinkedList:
         while tmp:
             print(tmp.data, end=" -> ")
             tmp = tmp.add_next_node
+        del(tmp)
         print("None")
     
     def insert_element_at_beg(self, data):
